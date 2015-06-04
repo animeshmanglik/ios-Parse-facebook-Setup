@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Parse
+import ParseFacebookUtilsV4
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.setApplicationId("dvdzDtIO29QDDbUu5m2Lk663aMXyp9QwvcxgkJ2f", clientKey:"AiUi683TmoL6hVP2NmKYyjriOLOEkzYnbB5zc9QK")
+        PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        
         return true
     }
 

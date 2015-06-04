@@ -1,0 +1,1 @@
+PODS_CODE_GREEN_FONTAWESOMEKIT_OTHER_LDFLAGS = -framework "CoreText" -framework "UIKit"
